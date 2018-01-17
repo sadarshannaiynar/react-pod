@@ -34,13 +34,6 @@ const config = {
   module: {
     rules: [
       {
-        enforce: 'pre',
-        test: /\.(js|jsx)$/,
-        exclude: /node_modules/,
-        include: APP_DIR,
-        loader: 'eslint-loader',
-      },
-      {
         test: /\.(js|jsx)$/,
         use: ['babel-loader'],
         exclude: /node_modules/,
@@ -57,3 +50,5 @@ const config = {
     new webpack.NoEmitOnErrorsPlugin(),
   ]
 };
+
+module.exports = config;
